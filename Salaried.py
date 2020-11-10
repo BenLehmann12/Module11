@@ -1,4 +1,8 @@
-
+'''
+Author:Ben Lehmann
+Date Modified: 11/8-11/9
+Function: One function will return salary per year, with date and Name, the other will return hourly salary, name and year
+'''
 from datetime import datetime
 class Employee:   #Base
     # Constructor
