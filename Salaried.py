@@ -1,9 +1,8 @@
-import datetime as datetime
 
 from datetime import datetime
 class Employee:   #Base
     # Constructor
-     def __init__(self, lname, fname):
+     def __init__(self, lname, fname):  #Call Back
          self._last_name = str(lname)
          self._first_name = str(fname)
 
@@ -20,12 +19,12 @@ class Employee:   #Base
 
 
 class SalariedEmployee(Employee):
-    def __init__(self, lname, fname,start_date,salary):
+    def __init__(self, lname, fname,start_date,salary):  #Call Name
         super().__init__(fname,lname)
         self._start_date = start_date
         self._salary = salary
 
-    def give_raise(self,incr_salary):
+    def give_raise(self,incr_salary):  #Add to Salary
         self._salary += incr_salary
 
     def display(self):
@@ -44,7 +43,7 @@ class HourlyEmployee(Employee):
         self._start_date = start_date
         self._hourly_pay = hourly_pay
     def give_rase(self,price_incr):
-        self._hourly_pay += price_incr
+        self._hourly_pay += price_incr  #Add to Hourly
 
     def display(self):
         return str(Employee.display(self)) + ", " + str(self._start_date) + "," + str(self._hourly_pay)
